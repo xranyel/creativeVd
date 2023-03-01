@@ -1,0 +1,529 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --primary: #ffa700;
+    --black: #2b2b2b;
+    --gray: #808080;
+    --white: #ffffff;
+}
+
+.container { 
+    max-width: 112rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+@media (min-width: 768px){
+    .container {
+        width: 100%;
+    }
+}
+
+@media (min-width: 992px){
+    .container {
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px){
+    .container {
+        width: 1170px;
+    }
+}
+
+/*HEADER CSS*/
+
+.header {
+    background-color: var(--black);
+    padding: 1rem 0;
+}
+
+.header__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--white);
+}
+
+.header__logo span {
+    color: var(--primary)
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+nav ul li a {
+    color: var(--gray);
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: var(--primary);   
+}
+
+.activecolor {
+    color:var(--primary)
+}
+
+.toggle__menu {
+    cursor: pointer;
+    display: none;
+}
+
+.toggle__menu span{
+    background-color: var(--primary);
+    display: block;
+    height: 0.2rem;
+    width: 2rem;
+    margin: 0.4rem;
+}
+
+@media (max-width: 768px){
+    .toggle__menu {
+        display: block;
+    }
+    nav ul{
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 6.5rem;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        text-align: center;
+    }
+    nav ul li a {
+        display: block;
+        width: 100%;
+        padding: 1rem;
+    }
+    nav ul li:hover {
+        background-color: var(--primary);
+    }
+    nav ul li:hover a{
+        color: var(--white);
+    }
+}
+
+
+/*HEADER CSS Ends here*/
+
+.banner {
+    padding: 6rem 0;
+}
+
+.banner__wrapper {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.banner img {
+    width: 40rem;
+}
+
+.banner__content h1 {
+    color: var(--primary);
+    font-size: 5rem;
+    line-height: 1;
+}
+
+.banner__content a {
+    text-decoration: none;
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 0.8rem 2rem;
+    display: inline-block;
+    border-radius: 3rem;
+    text-transform: uppercase;
+}
+
+.banner__content p {
+    margin: 2rem 0;
+    text-align: justify;
+}
+
+/*Banner CSS Ends here*/
+.services__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 3rem;
+}
+
+.services {
+    background-color: var(--black);
+    color: var(--white);
+    padding: 6rem 0;
+}
+
+.services__type {
+    text-align: center;
+}
+
+.services__type p {
+    text-align: justify;
+}
+
+.services__type h3 {
+    color: var(--primary);
+}
+
+.services__type a {
+    text-decoration: none;
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 0.8rem 2rem;
+    display: inline-block;
+    border-radius: 3rem;
+    text-transform: uppercase;
+}
+
+.services img, .services h3, .services p {
+    margin-bottom: 2rem;
+}
+
+/*Services CSS Ends here*/
+
+.aboutme {
+    padding: 6rem 0;
+}
+
+.aboutme__wrapper {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.aboutme h3 {
+    margin-bottom: 3rem;
+    color: var(--primary);
+}
+
+.aboutme p {
+    text-align: justify;
+    margin-bottom: 2rem;
+}
+
+/*About CSS Ends here*/
+
+.trends {
+    background-color: var(--black);
+    padding: 6rem 0;
+    color: var(--primary);
+}
+
+.cards {
+    padding-top: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.trends p {
+    color: var(--white);
+    padding-top: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.cardbox {
+    border-radius: 20px;
+    background-color: var(--white);
+}
+
+.cardbox p {
+    color: var(--black);
+}
+
+.cardbox p.yellow {
+    color: var(--primary);
+}
+
+.cardbox a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.cardbox img {
+    width: 100%;
+}
+
+.cardbox p,h4 {
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+.cardbox p {
+    margin-bottom: 2rem;
+}
+
+/*Trends CSS Ends here*/
+
+.contact {
+    background-color: var(--primary);
+    padding: 4rem 0;
+}
+
+.contact__wrapper {
+    text-align: center;
+}
+
+.contact__wrapper a {
+    margin-top: 30px;
+    text-decoration: none;
+    background-color: var(--black);
+    color: var(--white);
+    padding: 0.8rem 2rem;
+    display: inline-block;
+    border-radius: 3rem;
+    text-transform: uppercase;
+}
+
+/*Contact CSS Ends here*/
+
+.footer {
+    background-color: var(--black);
+    color: var(--gray);
+    padding: 3rem 0;
+}
+
+.footer ul {
+    list-style: none;
+    display: flex;
+    gap: 0.8rem;
+}
+
+.footer ul li a i {
+    font-size: 1.5rem;
+    color: var(--gray);
+}
+
+/*pede burahin*/
+.footer ul li a {
+    display: inline-block;   
+}
+
+.socialLinks {
+    display: flex;
+    gap: 1rem;
+    align-items: center; /*pede burahin*/
+}
+
+.footer__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*ABOUT ME - Banner CSS starts here*/
+
+.banner-about {
+    padding: 6rem 0 3rem 0;
+}
+
+.banner__wrapper-about {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.banner-about img {
+    width: 40rem;
+}
+
+.banner__content-about h1 {
+    color: var(--primary);
+    font-size: 5rem;
+    line-height: 1;
+}
+
+.banner__content-about a {
+    
+    color: var(--primary);
+    
+}
+
+.banner__content-about p {
+    margin: 2rem 0;
+    text-align: justify;
+}
+
+.banner__content-about p.nomargin {
+    margin: 0 0;
+}
+
+.banner__link ul{
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+.makeItCenter {
+    text-align: center;
+}
+
+.makeItCenter i {
+    color: var(--primary);
+}
+
+/*ABOUT ME - Banner CSS ends here*/
+
+.trends-about {
+    background-color: var(--black);
+    padding: 6rem 0;
+    color: var(--primary);
+}
+
+.cards-about {
+    padding-top: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.trends-about p {
+    color: var(--white);
+    padding-top: 0.5rem;
+    margin-bottom: 5rem;
+}
+
+.trends-about h1 {
+    font-size: 2.5rem;
+}
+
+.cardbox-about {
+    border-radius: 20px;
+    background-color: var(--white);
+    margin-bottom: 20px;
+}
+
+.cardbox-about p {
+    color: var(--black);
+    padding-bottom: 30px;
+}
+
+.cardbox-about p.yellow {
+    color: var(--primary);
+}
+
+.cardbox-about img {
+    width: 100%;
+}
+
+.cardbox-about p,h4 {
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+.cardbox-about p {
+    margin-bottom: 2rem;
+}
+
+/*SERVICES Banner 1*/
+
+.banner-services {
+    padding: 6rem 0 3rem 0;
+}
+
+.banner__wrapper-services {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.banner-services img {
+    width: 40rem;
+}
+
+.banner__content-services h1 {
+    color: var(--primary);
+    font-size: 3rem;
+    line-height: 1;
+}
+
+.banner__content-services h3 {
+    color: var(--primary);
+    font-size: 1.8rem;
+}
+
+.banner__content-services a {
+    
+    color: var(--primary);
+    
+}
+
+.banner__content-services p {
+    margin: 2rem 0;
+    text-align: justify;
+}
+
+.nomargin small {
+    font-size: 10px;
+}
+
+.banner__content-services p.nomargin {
+    margin: 0 0;
+}
+
+.bgblack {
+    background-color: var(--black);
+}
+
+p.twhite {
+    color: var(--white);
+}
+
+/*updates*/
+
+.updates {
+    padding: 6rem 0;
+}
+
+.frameone {
+    margin-top: 100px;
+}
+
+.frameone ul{
+    padding-top: 10px;
+    display: flex;
+    font-size: 7px;
+    gap: 50px;
+    list-style: none;
+}
+
+.updates h1 {
+    color: var(--primary);
+    font-size: 2.5rem;
+}
+
+.frameone h1 {
+    font-size: 1.7rem;
+    padding: 15px 0;
+}
+
+.frameone p {
+    max-width: 720px;
+    text-align: justify;
+    padding: 15px 0;
+}
+
+.frameone a {
+    text-decoration: none;
+    color: var(--primary);
+    padding-bottom: 30px;
+}
+
