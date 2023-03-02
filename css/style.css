@@ -6,6 +6,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
 }
 
 :root {
@@ -44,6 +45,9 @@ body {
 .header {
     background-color: var(--black);
     padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
 }
 
 .header__wrapper {
@@ -93,26 +97,34 @@ nav ul li a:hover {
     height: 0.2rem;
     width: 2rem;
     margin: 0.4rem;
+    border-radius: 0.5rem;
+    transition: 0.5s ease-in;
 }
 
 @media (max-width: 768px){
     .toggle__menu {
         display: block;
     }
+    nav.open ul {
+        right: 0;
+        transition: 0.5s ease-in;
+    }
     nav ul{
         display: block;
         position: absolute;
-        left: 0;
+        right: -100%;
         top: 6.5rem;
         width: 100%;
-        height: 100%;
+        height: 100vh;
         background-color: white;
         text-align: center;
+        transition: 0.5s ease-in;
     }
     nav ul li a {
         display: block;
         width: 100%;
         padding: 1rem;
+        border-bottom: 1px solid black;
     }
     nav ul li:hover {
         background-color: var(--primary);
@@ -120,6 +132,19 @@ nav ul li a:hover {
     nav ul li:hover a{
         color: var(--white);
     }
+    .toggle__menu.open span:nth-child(1){
+        transition: 0.5s ease;
+        transform: translate(-2px, 7.3px) rotate(45deg);
+    }
+    .toggle__menu.open span:nth-child(2){
+        opacity: 0;
+        transition: 0s;
+    }
+    .toggle__menu.open span:nth-child(3){
+        transition: 0.5s ease;
+        transform: translate(-2px, -12px) rotate(-45deg);
+    }
+    
 }
 
 
@@ -134,6 +159,14 @@ nav ul li a:hover {
     align-items: center;
     gap: 4rem;
 }
+@media (max-width: 998px){
+    .banner__wrapper {
+        flex-direction: column;
+    }
+    .banner img {
+        width: 100% !important;
+    }
+}
 
 .banner img {
     width: 40rem;
@@ -141,7 +174,7 @@ nav ul li a:hover {
 
 .banner__content h1 {
     color: var(--primary);
-    font-size: 5rem;
+    font-size: clamp(3rem, 5vw, 5rem);
     line-height: 1;
 }
 
@@ -165,6 +198,11 @@ nav ul li a:hover {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 3rem;
+}
+@media (max-width: 768px){
+    .services__wrapper {
+        grid-template-columns: 1fr;
+    }
 }
 
 .services {
@@ -221,6 +259,15 @@ nav ul li a:hover {
     margin-bottom: 2rem;
 }
 
+@media (max-width: 768px){
+    .aboutme__wrapper {
+        flex-direction: column;
+    }
+    .aboutme img {
+        width: 100% !important;
+    }
+}
+
 /*About CSS Ends here*/
 
 .trends {
@@ -235,16 +282,27 @@ nav ul li a:hover {
     gap: 1rem;
 }
 
+
+
 .trends p {
     color: var(--white);
     padding-top: 0.5rem;
     margin-bottom: 2rem;
 }
 
+@media (max-width: 768px){
+    .cards {
+        display: block;
+        max-width: 363px;
+        margin: auto;
+    }
+}
+
 .cardbox {
     border-radius: 20px;
     background-color: var(--white);
 }
+
 
 .cardbox p {
     color: var(--black);
@@ -272,6 +330,15 @@ nav ul li a:hover {
     margin-bottom: 2rem;
 }
 
+
+@media (max-width: 768px){
+    .cardbox {
+        border-radius: 25px;
+    }
+    .cardbox p{
+        padding-bottom: 15px;
+    }
+}
 /*Trends CSS Ends here*/
 
 .contact {
@@ -313,21 +380,43 @@ nav ul li a:hover {
     color: var(--gray);
 }
 
-/*pede burahin*/
+
+
 .footer ul li a {
     display: inline-block;   
+}
+@media (max-width: 768px){
+    .footer ul li {
+        margin: auto;
+    }
 }
 
 .socialLinks {
     display: flex;
     gap: 1rem;
-    align-items: center; /*pede burahin*/
+    align-items: center;
+}
+
+@media (max-width: 768px){
+    .socialLinks {
+        display: inline;
+    }
+    .socialLinks ul{
+        text-align: center;
+    }
 }
 
 .footer__wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+@media (max-width: 768px){
+    .footer__wrapper {
+        display: inline;
+        text-align: center;
+    }
 }
 
 /*ABOUT ME - Banner CSS starts here*/
@@ -373,6 +462,15 @@ nav ul li a:hover {
     gap: 1.5rem;
 }
 
+@media (max-width: 768px){
+    .banner__wrapper-about {
+        flex-direction: column;
+    }
+    .banner-about img {
+        width: 100% !important;
+    }
+}
+
 .makeItCenter {
     text-align: center;
 }
@@ -390,7 +488,6 @@ nav ul li a:hover {
 }
 
 .cards-about {
-    padding-top: 1rem;
     display: flex;
     gap: 1rem;
 }
@@ -431,6 +528,14 @@ nav ul li a:hover {
 
 .cardbox-about p {
     margin-bottom: 2rem;
+}
+
+@media (max-width: 768px){
+    .cards-about {
+        display: block;
+        max-width: 363px;
+        margin: auto;
+    }
 }
 
 /*SERVICES Banner 1*/
@@ -487,17 +592,39 @@ p.twhite {
     color: var(--white);
 }
 
+@media (max-width: 768px){
+    .banner__wrapper-services {
+        flex-direction: column;
+    }
+    .banner-services img {
+        width: 100% !important;
+    }
+}
+
 /*updates*/
 
-.updates {
+.updates__wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
     padding: 6rem 0;
 }
 
-.frameone {
-    margin-top: 100px;
+.updates-latest-trends__content h1 {
+    color: var(--primary);
+    font-size: 3.5rem;
 }
 
-.frameone ul{
+.updates-latest-trends__content h2 {
+    color: var(--primary);
+    font-size: 2rem;
+    margin-top: 2rem;
+}
+
+.updates-latest-trends__content img {
+    margin-top: 3rem;
+}
+
+.updates-latest-trends__content ul {
     padding-top: 10px;
     display: flex;
     font-size: 7px;
@@ -505,25 +632,97 @@ p.twhite {
     list-style: none;
 }
 
-.updates h1 {
-    color: var(--primary);
-    font-size: 2.5rem;
-}
-
-.frameone h1 {
-    font-size: 1.7rem;
-    padding: 15px 0;
-}
-
-.frameone p {
-    max-width: 720px;
-    text-align: justify;
-    padding: 15px 0;
-}
-
-.frameone a {
+.updates-latest-trends__content a {
     text-decoration: none;
     color: var(--primary);
     padding-bottom: 30px;
 }
 
+.updates-latest-trends__content p {
+    margin-bottom: 2rem;
+    text-align: justify;
+}
+
+.hrmargin {
+    margin-top: 45px;
+}
+
+.hrmargin2 {
+    margin-top: 120px;
+}
+
+.categories {
+    margin-top: 11.2rem;
+}
+
+.categories h2 {
+    color: var(--primary);
+    margin-bottom: 3rem;
+}
+
+.categories-list h5 {
+    color: var(--black);
+    font-size: 1rem;
+    font-weight: normal;
+    margin: 5px 0;
+}
+
+.categories-list {
+    justify-content: space-between;
+    display: flex;
+}
+
+.recent-post {
+    margin-top: 50px;
+}
+
+.recent-post h2 {
+    color: var(--primary);
+    margin-bottom: 3rem;
+}
+
+.post-list {
+    display: flex;
+    padding-left: 10px;
+    padding-top: 30px;
+}
+
+.post-list h5 {
+    text-align: justify;
+    margin-left: 10px;
+}
+
+.post-list p {
+    margin-left: 10px;
+    margin-top: 15px;
+}
+
+.tags {
+    margin-top: 95px;
+}
+
+.tags h2 {
+    margin-bottom: 25px;
+}
+
+.buttons {
+    margin-top: 15px;
+}
+
+.tagsbutton{
+    padding: 15px 30px;
+    display: inline-block;
+    border: 2px solid var(--black);
+    border-radius: 30px;
+    margin-left: 10px;
+}
+
+.tagsbutton a {
+    text-decoration: none;
+    color: var(--black);
+    font-weight: 500;
+}
+
+.tagsbutton .diffcolor {
+    color: var(--white);
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Visual Design</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            
+            <div class="header__wrapper">
+                <div class="header__logo">
+                    <img src="./img/logo.png" alt="">
+                    <h2>Creative <span>Visual</span> Design</h2>
+                </div>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="updates.html">Updates</a></li>
+                        <li><a class="activecolor" href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="toggle__menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+    
+        </div>
+    </header>
+
+    <section class="contactpage">
+        <div class="container">
+            <div class="contact__wrapper">
+                <div class="contact__content">
+                    <h1></h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+
+            <div class="footer__wrapper">
+                <div class="socialLinks">
+                    <ul>
+                        <li><a href="#"><i class="fa-brands fa-facebook fa-2x"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-twitter fa-2x"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-instagram fa-2x"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-youtube fa-2x"></i></a></li>
+                        <li><a href="#"><i class="fa-solid fa-envelope fa-2x"></i></a></li>
+                    </ul>
+                    <p>
+                        <small>
+                            Baloc Road, Brgy. San Ignacio San Pablo City, Laguna 4000
+                        </small>
+                    </p>
+                </div>
+                
+                <p>
+                    <small>
+                        ©CREATIVEVISUALDESIGNS2022
+                    </small>
+                </p>
+            </div>
+
+        </div>
+    </footer>
+    <script>
+
+        const nav = document.querySelector(".nav");
+        const toggleMenu = document.querySelector(".toggle__menu");
+
+        toggleMenu.addEventListener("click", ()=>{
+            toggleMenu.classList.toggle("open");
+            nav.classList.toggle("open");
+        })
+
+    </script>
+    
+</body>
+</html>
