@@ -385,11 +385,7 @@ nav ul li a:hover {
 .footer ul li a {
     display: inline-block;   
 }
-@media (max-width: 768px){
-    .footer ul li {
-        margin: auto;
-    }
-}
+
 
 .socialLinks {
     display: flex;
@@ -402,7 +398,7 @@ nav ul li a:hover {
         display: inline;
     }
     .socialLinks ul{
-        text-align: center;
+        justify-content: center;
     }
 }
 
@@ -620,6 +616,10 @@ p.twhite {
     margin-top: 2rem;
 }
 
+.updates-latest-trends__content p {
+    max-width: 719px;
+}
+
 .updates-latest-trends__content img {
     margin-top: 3rem;
 }
@@ -702,6 +702,7 @@ p.twhite {
 }
 
 .tags h2 {
+    color: var(--primary);
     margin-bottom: 25px;
 }
 
@@ -725,4 +726,112 @@ p.twhite {
 
 .tagsbutton .diffcolor {
     color: var(--white);
+}
+
+@media (max-width: 768px) {
+    .updates__wrapper {
+        grid-template-columns: 1fr;
+    }
+    .updates-latest-trends__content img {
+        width: 100%;
+    }
+    .updates-latest-trends__content ul {
+        display: block;
+    }
+}
+
+/*aaaaaaaaaaaaaaaaaaaaa*/
+
+.contactpage {
+    padding: 6rem 0;
+    background-color: var(--black);
+    border-top: 2px solid black;
+    border-bottom: 1px solid white;
+}
+
+.contact__wrapperpage {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.linkflex {
+    margin-top: 2.5rem;
+}
+
+.linkflex ul {
+    display: flex;
+}
+
+.contact__content {
+    color: white;
+}
+
+.contact__content h1{
+    color: var(--primary);
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.contact__content ul {
+    margin-top: 30px;
+}
+
+.contact__content ul li{
+    list-style: none;
+    margin-bottom: 15px;
+}
+
+.contact__content ul li i {
+    margin-right: 30px;
+    color: var(--primary);
+}
+
+.contact__content .linkflex ul li i {
+    margin-right: 30px;
+    color: var(--white);
+}
+
+.contact__form input {
+    width: 450px;
+    height: 50px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+
+.contact__form textarea {
+    width: 450px;
+    height: 100px;
+    padding-left: 10px;
+    padding-top: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.contact__form button {
+    color: white;
+    background-color: var(--primary);
+    border-color: var(--primary);
+    border-radius: 3rem;
+    padding: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-left: 330px;
+}
+
+@media (max-width: 768px) {
+    .contact__wrapperpage {
+        display: block;
+    }
+    .contact__form {
+        margin-top: 3rem;
+    }
+}
+
+.addmar {
+    margin-bottom: 5rem;
 }
